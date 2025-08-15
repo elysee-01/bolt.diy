@@ -53,7 +53,7 @@ export default class LMStudioProvider extends BaseProvider {
       name: model.id,
       label: model.id,
       provider: this.name,
-      maxTokenAllowed: 4000,
+      maxTokenAllowed: 8000,
     }));
   }
   getModelInstance: (options: {

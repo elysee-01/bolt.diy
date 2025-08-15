@@ -17,31 +17,31 @@ export default class HyperbolicProvider extends BaseProvider {
       name: 'Qwen/Qwen2.5-Coder-32B-Instruct',
       label: 'Qwen 2.5 Coder 32B Instruct',
       provider: 'Hyperbolic',
-      maxTokenAllowed: 4000,
+      maxTokenAllowed: 8192,
     },
     {
       name: 'Qwen/Qwen2.5-72B-Instruct',
       label: 'Qwen2.5-72B-Instruct',
       provider: 'Hyperbolic',
-      maxTokenAllowed: 4000,
+      maxTokenAllowed: 8192,
     },
     {
       name: 'deepseek-ai/DeepSeek-V2.5',
       label: 'DeepSeek-V2.5',
       provider: 'Hyperbolic',
-      maxTokenAllowed: 4000,
+      maxTokenAllowed: 8192,
     },
     {
       name: 'Qwen/QwQ-32B-Preview',
       label: 'QwQ-32B-Preview',
       provider: 'Hyperbolic',
-      maxTokenAllowed: 4000,
+      maxTokenAllowed: 8192,
     },
     {
       name: 'Qwen/Qwen2-VL-72B-Instruct',
       label: 'Qwen2-VL-72B-Instruct',
       provider: 'Hyperbolic',
-      maxTokenAllowed: 4000,
+      maxTokenAllowed: 8192,
     },
   ];
 
@@ -77,7 +77,7 @@ export default class HyperbolicProvider extends BaseProvider {
       name: m.id,
       label: `${m.id} - context ${m.context_length ? Math.floor(m.context_length / 1000) + 'k' : 'N/A'}`,
       provider: this.name,
-      maxTokenAllowed: m.context_length || 4000,
+      maxTokenAllowed: m.context_length || 8000,
     }));
   }
 
