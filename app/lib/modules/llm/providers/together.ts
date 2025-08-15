@@ -17,19 +17,19 @@ export default class TogetherProvider extends BaseProvider {
       name: 'Qwen/Qwen2.5-Coder-32B-Instruct',
       label: 'Qwen/Qwen2.5-Coder-32B-Instruct',
       provider: 'Together',
-      maxTokenAllowed: 8000,
+      maxTokenAllowed: 4000,
     },
     {
       name: 'meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo',
       label: 'meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo',
       provider: 'Together',
-      maxTokenAllowed: 8000,
+      maxTokenAllowed: 4000,
     },
     {
       name: 'mistralai/Mixtral-8x7B-Instruct-v0.1',
       label: 'Mixtral 8x7B Instruct',
       provider: 'Together',
-      maxTokenAllowed: 8192,
+      maxTokenAllowed: 4000,
     },
   ];
 
@@ -66,7 +66,7 @@ export default class TogetherProvider extends BaseProvider {
       name: m.id,
       label: `${m.display_name} - in:$${m.pricing.input.toFixed(2)} out:$${m.pricing.output.toFixed(2)} - context ${Math.floor(m.context_length / 1000)}k`,
       provider: this.name,
-      maxTokenAllowed: 8000,
+      maxTokenAllowed: 4000,
     }));
   }
 

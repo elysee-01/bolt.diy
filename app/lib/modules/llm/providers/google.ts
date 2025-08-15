@@ -13,19 +13,19 @@ export default class GoogleProvider extends BaseProvider {
   };
 
   staticModels: ModelInfo[] = [
-    { name: 'gemini-1.5-flash-latest', label: 'Gemini 1.5 Flash', provider: 'Google', maxTokenAllowed: 8192 },
+    { name: 'gemini-1.5-flash-latest', label: 'Gemini 1.5 Flash', provider: 'Google', maxTokenAllowed: 4000 },
     {
       name: 'gemini-2.0-flash-thinking-exp-01-21',
       label: 'Gemini 2.0 Flash-thinking-exp-01-21',
       provider: 'Google',
-      maxTokenAllowed: 65536,
+      maxTokenAllowed: 4000,
     },
-    { name: 'gemini-2.0-flash-exp', label: 'Gemini 2.0 Flash', provider: 'Google', maxTokenAllowed: 8192 },
-    { name: 'gemini-1.5-flash-002', label: 'Gemini 1.5 Flash-002', provider: 'Google', maxTokenAllowed: 8192 },
-    { name: 'gemini-1.5-flash-8b', label: 'Gemini 1.5 Flash-8b', provider: 'Google', maxTokenAllowed: 8192 },
-    { name: 'gemini-1.5-pro-latest', label: 'Gemini 1.5 Pro', provider: 'Google', maxTokenAllowed: 8192 },
-    { name: 'gemini-1.5-pro-002', label: 'Gemini 1.5 Pro-002', provider: 'Google', maxTokenAllowed: 8192 },
-    { name: 'gemini-exp-1206', label: 'Gemini exp-1206', provider: 'Google', maxTokenAllowed: 8192 },
+    { name: 'gemini-2.0-flash-exp', label: 'Gemini 2.0 Flash', provider: 'Google', maxTokenAllowed: 4000 },
+    { name: 'gemini-1.5-flash-002', label: 'Gemini 1.5 Flash-002', provider: 'Google', maxTokenAllowed: 4000 },
+    { name: 'gemini-1.5-flash-8b', label: 'Gemini 1.5 Flash-8b', provider: 'Google', maxTokenAllowed: 4000 },
+    { name: 'gemini-1.5-pro-latest', label: 'Gemini 1.5 Pro', provider: 'Google', maxTokenAllowed: 4000 },
+    { name: 'gemini-1.5-pro-002', label: 'Gemini 1.5 Pro-002', provider: 'Google', maxTokenAllowed: 4000 },
+    { name: 'gemini-exp-1206', label: 'Gemini exp-1206', provider: 'Google', maxTokenAllowed: 4000 },
   ];
 
   async getDynamicModels(
@@ -59,7 +59,7 @@ export default class GoogleProvider extends BaseProvider {
       name: m.name.replace('models/', ''),
       label: `${m.displayName} - context ${Math.floor((m.inputTokenLimit + m.outputTokenLimit) / 1000) + 'k'}`,
       provider: this.name,
-      maxTokenAllowed: m.inputTokenLimit + m.outputTokenLimit || 8000,
+      maxTokenAllowed: m.inputTokenLimit + m.outputTokenLimit || 4000,
     }));
   }
 
